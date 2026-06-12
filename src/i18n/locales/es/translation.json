@@ -1,0 +1,57 @@
+{
+    "app": {
+      "title": "Predicción de precios agrícolas",
+      "subtitle": "Comparación de modelos ARIMA, LSTM y XGBoost para precios agrícolas en Ecuador"
+    },
+
+    "dashboard": {
+      "badge": "Prototipo predictivo agrícola",
+      "quickStatsTitle": "Resumen del análisis",
+      "products": "Productos",
+      "models": "Modelos",
+      "horizon": "Horizonte",
+      "months": "meses",
+      "insightTitle": "Lectura rápida",
+      "insightText": "Selecciona un producto y una provincia para comparar el comportamiento de los modelos predictivos en el corto plazo."
+    },
+  
+    "forecast": {
+      "parameters": "Parámetros de predicción",
+      "product": "Producto",
+      "province": "Provincia",
+      "horizon": "Horizonte",
+      "compareModels": "Comparar modelos",
+      "loading": "Generando...",
+      "threeMonths": "3 meses",
+      "twoMonths": "2 meses",
+      "oneMonth": "1 mes"
+    },
+  
+    "metrics": {
+      "title": "Métricas de desempeño",
+      "mae": "MAE",
+      "rmse": "RMSE",
+      "mape": "MAPE",
+      "r2": "R²",
+      "directionalAccuracy": "Precisión direccional"
+    },
+  
+    "chart": {
+      "title": "Comparación de predicciones",
+      "month": "Mes"
+    },
+
+    "insights": {
+      "currentPrice": "Precio actual",
+      "expectedPrice": "Precio esperado",
+      "variation": "Variación estimada",
+      "bestModel": "Mejor modelo",
+      "lastObserved": "Último dato",
+      "interpretation": "Interpretación",
+      "up": "tendencia alcista",
+      "down": "tendencia bajista",
+      "stable": "tendencia estable",
+      "summary": "El modelo {{model}} proyecta una {{trend}} para {{product}} en {{province}}, con una variación estimada de {{change}}% durante los próximos {{horizon}} meses.",
+      "chartSubtitle": "Histórico reciente y predicción en {{unit}}"
+    }
+  }
