@@ -1,57 +1,142 @@
 {
-    "app": {
-      "title": "Predicción de precios agrícolas",
-      "subtitle": "Comparación de modelos ARIMA, LSTM y XGBoost para precios agrícolas en Ecuador"
+  "app": {
+    "title": "Predicción de precios agrícolas",
+    "description": "Consulta cómo podría variar el precio de productos agrícolas en Ecuador durante los próximos meses.",
+    "automaticModel": "Para cada producto, el sistema utiliza automáticamente el modelo que obtuvo mejores resultados durante la evaluación del estudio. Se evaluaron tres modelos de predicción: SARIMAX, LSTM y XGBoost."
+  },
+  "chart": {
+    "title": "Evolución y proyección del precio",
+    "subtitle": "El gráfico muestra los precios registrados recientemente y la estimación para los próximos meses, expresados en {{unit}}.",
+    "forecastStarts": "Inicio de la proyección",
+    "projectionPeriod_one": "Proyección: 1 mes",
+    "projectionPeriod_other": "Proyección: {{count}} meses",
+    "historical": "Precio registrado",
+    "estimatedPrice": "Precio estimado",
+    "explanation": "La línea histórica muestra los precios observados anteriormente. La proyección muestra cómo podría evolucionar el precio durante el período seleccionado."
+  },
+  "dashboard": {
+    "badge": "Herramienta de predicción agrícola",
+    "whatCanYouCheck": "¿Qué puedes consultar?",
+    "availableProducts": "{{count}} productos agrícolas disponibles",
+    "availableProductsDescription": "Papa Superchola, Tomate Riñón de Invernadero y Maracuyá.",
+    "provinces": "Predicciones para distintas provincias",
+    "provincesDescription": "Las provincias disponibles dependen del producto seleccionado.",
+    "projections": "Proyecciones de 1 a 3 meses",
+    "projectionsDescription": "Consulta cómo podría evolucionar el precio en el corto plazo.",
+    "priceUnit": "Resultados expresados en USD/kg",
+    "priceUnitDescription": "Los precios se presentan en dólares por kilogramo para facilitar su interpretación.",
+    "howToUse": "¿Cómo funciona?",
+    "howToUseTitle": "Realiza una consulta en cuatro pasos",
+    "howToUseDescription": "No necesitas conocimientos de inteligencia artificial ni de modelos estadísticos para utilizar esta herramienta.",
+    "resultHint": "Después de generar la predicción podrás consultar el último precio conocido, el precio estimado, su posible variación y una explicación sencilla de la tendencia."
+  },
+  "insights": {
+    "currentPrice": "Último precio registrado",
+    "lastObserved": "Dato más reciente: {{date}}",
+    "expectedPrice": "Precio estimado",
+    "expectedPriceDescription_one": "Estimación para el próximo mes",
+    "expectedPriceDescription_other": "Estimación al finalizar los próximos {{count}} meses",
+    "variation": "Cambio estimado",
+    "absoluteVariation": "Equivale a {{value}} respecto al último precio",
+    "trend": "Tendencia esperada",
+    "trendDescription": "Dirección general que podría seguir el precio",
+    "up": "Al alza",
+    "down": "A la baja",
+    "stable": "Estable",
+    "interpretation": "¿Qué significa esta predicción?",
+    "summary": "Para {{product}} en {{province}}, el sistema estima una tendencia {{trend}} durante los próximos {{horizon}} meses. El precio podría pasar de {{currentPrice}} a aproximadamente {{expectedPrice}}, lo que representa una variación estimada del {{change}}%.",
+    "disclaimer": "Esta predicción es una estimación basada en información histórica y variables asociadas al mercado. No representa un precio garantizado."
+  },
+  "instructions": {
+    "product": {
+      "title": "Selecciona un producto",
+      "description": "Elige el producto agrícola cuyo precio deseas consultar."
     },
-
-    "dashboard": {
-      "badge": "Prototipo predictivo agrícola",
-      "quickStatsTitle": "Resumen del análisis",
-      "products": "Productos",
-      "models": "Modelos",
-      "horizon": "Horizonte",
-      "months": "meses",
-      "insightTitle": "Lectura rápida",
-      "insightText": "Selecciona un producto y una provincia para comparar el comportamiento de los modelos predictivos en el corto plazo."
+    "province": {
+      "title": "Elige una provincia",
+      "description": "Selecciona la provincia para la que deseas conocer la proyección."
     },
-  
-    "forecast": {
-      "parameters": "Parámetros de predicción",
-      "product": "Producto",
-      "province": "Provincia",
-      "horizon": "Horizonte",
-      "compareModels": "Comparar modelos",
-      "loading": "Generando...",
-      "threeMonths": "3 meses",
-      "twoMonths": "2 meses",
-      "oneMonth": "1 mes"
+    "period": {
+      "title": "Define el período",
+      "description": "Indica si deseas conocer la proyección para 1, 2 o 3 meses."
     },
-  
-    "metrics": {
-      "title": "Métricas de desempeño",
-      "mae": "MAE",
-      "rmse": "RMSE",
-      "mape": "MAPE",
-      "r2": "R²",
-      "directionalAccuracy": "Precisión direccional"
-    },
-  
-    "chart": {
-      "title": "Comparación de predicciones",
-      "month": "Mes"
-    },
-
-    "insights": {
-      "currentPrice": "Precio actual",
-      "expectedPrice": "Precio esperado",
-      "variation": "Variación estimada",
-      "bestModel": "Mejor modelo",
-      "lastObserved": "Último dato",
-      "interpretation": "Interpretación",
-      "up": "tendencia alcista",
-      "down": "tendencia bajista",
-      "stable": "tendencia estable",
-      "summary": "El modelo {{model}} proyecta una {{trend}} para {{product}} en {{province}}, con una variación estimada de {{change}}% durante los próximos {{horizon}} meses.",
-      "chartSubtitle": "Histórico reciente y predicción en {{unit}}"
+    "result": {
+      "title": "Genera la predicción",
+      "description": "El sistema analizará la información y mostrará el precio estimado y su posible tendencia."
     }
+  },
+  "forecast": {
+    "start": "Consultar precio",
+    "sectionLabel": "Consulta de precio",
+    "title": "¿Qué precio deseas consultar?",
+    "description": "Selecciona el producto, la provincia y el período que deseas analizar. El sistema utilizará automáticamente el modelo más adecuado para realizar la estimación.",
+    "product": "Producto agrícola",
+    "productHelp": "Selecciona el producto cuyo precio deseas conocer.",
+    "province": "Provincia",
+    "provinceHelp": "Las provincias disponibles cambian según el producto seleccionado.",
+    "period": "Período de proyección",
+    "periodHelp": "Puedes consultar una estimación para los próximos 1, 2 o 3 meses.",
+    "oneMonth": "1 mes",
+    "twoMonths": "2 meses",
+    "threeMonths": "3 meses",
+    "generate": "Generar predicción",
+    "loading": "Generando predicción...",
+    "actionHint": "La estimación se mostrará en USD/kg e incluirá una explicación sencilla de la tendencia esperada."
+  },
+  "metrics": {
+    "sectionLabel": "Comparación de métodos",
+    "comparisonTitle": "¿Por qué se utiliza este método?",
+    "description": "Durante el estudio se evaluaron distintos métodos de predicción. Esta comparación permite conocer cuál presentó mejores resultados para el producto seleccionado.",
+    "modelLabel": "Método predictivo",
+    "recommended": "Recomendado",
+    "averagePercentageError": "Error promedio",
+    "averagePercentageErrorDescription": "Diferencia porcentual promedio entre el precio estimado y el precio real.",
+    "directionAccuracy": "Acierto de tendencia",
+    "directionAccuracyDescription": "Porcentaje de ocasiones en las que el método acertó si el precio subía o bajaba.",
+    "technicalDetails": "Ver métricas técnicas",
+    "testSamples": "Casos evaluados",
+    "mae": "MAE",
+    "rmse": "RMSE",
+    "mape": "MAPE",
+    "r2": "R²",
+    "directionalAccuracy": "Precisión direccional",
+    "readingGuide": "En general, un menor porcentaje de error indica predicciones más cercanas al precio real, mientras que un mayor porcentaje de acierto de tendencia indica una mejor capacidad para anticipar si el precio subirá o bajará.",
+    "performance": {
+      "excellent": "Muy buen desempeño",
+      "good": "Buen desempeño",
+      "limited": "Mayor nivel de error"
+    },
+    "modelsExplanation": {
+      "label": "Sobre los modelos",
+      "title": "¿Qué métodos de predicción se evaluaron?",
+      "description": "El estudio comparó tres modelos con diferentes formas de analizar la información disponible para estimar los precios agrícolas.",
+      "arima": "Analiza principalmente el comportamiento histórico del precio y sus patrones a lo largo del tiempo para realizar una proyección.",
+      "lstm": "Es una red neuronal capaz de aprender patrones temporales y relaciones entre diferentes variables a lo largo del tiempo.",
+      "xgboost": "Utiliza múltiples variables históricas, agrícolas y económicas para identificar relaciones y estimar el precio futuro.",
+      "selectionTitle": "No necesitas seleccionar un modelo.",
+      "selectionDescription": "Para cada producto, el sistema utiliza automáticamente el modelo que presentó el mejor desempeño durante la evaluación realizada."
+    },
+    "tooltips": {
+      "mape": "Mide el error promedio de las predicciones en términos porcentuales. Por ejemplo, un MAPE de 8% indica que las estimaciones se desviaron aproximadamente un 8% del precio real. Mientras menor sea el valor, mejor.",
+      "directionalAccuracy": "Indica con qué frecuencia el método acertó la dirección del cambio del precio, es decir, si este subió o bajó.",
+      "mae": "Mide la diferencia promedio entre el precio estimado y el precio real. Valores menores representan una mejor precisión.",
+      "rmse": "Mide el tamaño típico del error de predicción, penalizando con mayor fuerza los errores grandes. Mientras menor sea el valor, mejor.",
+      "r2": "Indica qué tan bien el método explica las variaciones observadas en los precios. Los valores más cercanos a 1 representan un mejor ajuste.",
+      "testSamples": "Cantidad de observaciones que se utilizaron para evaluar el desempeño del método con datos que no fueron utilizados directamente para su entrenamiento."
+    }
+  },
+  "result": {
+  "generating": "Estamos preparando tu predicción",
+  "generatingDescription": "El sistema está analizando la información disponible. Esto puede tomar unos segundos.",
+  "updated": "Predicción actualizada",
+  "nextMonths_one": "próximo mes",
+  "nextMonths_other": "próximos {{count}} meses"
+  },
+  "technical": {
+    "optional": "Información opcional",
+    "title": "¿Cómo se obtuvo este resultado?",
+    "description": "Consulta información adicional sobre el método utilizado y su desempeño.",
+    "modelUsed": "Método utilizado",
+    "modelSelectionExplanation": "Este método fue seleccionado automáticamente porque presentó el mejor desempeño predictivo para {{product}} durante la evaluación realizada en el estudio."
   }
+}
